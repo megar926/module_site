@@ -1,0 +1,1 @@
+C:\Users\Alexander\projects\python\bomConverterCommon\base.xlsx;C:\Users\Alexander\projects\python\bomConverterCommon\Соединители.xlsx

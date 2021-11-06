@@ -1,0 +1,43 @@
+    <!doctype html>
+    <title>Upload new File</title>
+    <h2>Конвертер BOM Cadence файла в excel для загрузки в IPS</h2>
+    <form method=post enctype=multipart/form-data>
+        <label for="fileBom">
+    Select Cadence BOM file (html/xlsx)
+        </label>
+        <br>
+      <input type=file name=fileBom value="Select BOM html">
+        <br>
+        <br>
+      <input type=submit value="Convert Bom">
+        <br><br>
+        <hr>
+        <h2>Генерация файла для автоматического монтажа (Д32)</h2>
+        <label for="fileBomPick">
+    Select Cadence BOM file (html/xlsx)
+        </label>
+        <br>
+        <input type=file name=fileBomPick>
+        <br>
+        <label for="fileBrdPick">
+    Select .txt pick cadence file (.txt)
+        </label>
+        <br>
+        <input type=file name=fileBrdPick>
+        <br>
+        <label for="fileBrdPick">
+    Select "файл замен" (.xlsx)
+        </label>
+        <br>
+        <input type=file name=fileZamPick>
+        <br>
+        <label for="checkDb">
+    Синхронизироваться с БД
+        </label>
+        <input type="checkbox" id="checkDb" name="checkDb" value="checkDb">
+        <br>
+        <input type=submit value="Convert Pick and Place">
+
+    </form>
+    <br>
+    <textarea cols = 90 rows = 20>{{ text }}</textarea>
