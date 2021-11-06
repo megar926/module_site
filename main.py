@@ -58,7 +58,5 @@ def upload_file():
             bom.convertpick(checkdbval, "files_upload\\"+fileBomPick.filename, "files_upload\\"+fileBrdPick.filename, zam_file)
     return render_template("main.html", text = bomFilePath)
 
-
-
 if __name__ == '__main__':
     app.run(debug = True)
