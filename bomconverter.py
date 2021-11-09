@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import re
 import datetime
-from fuzzywuzzy import fuzz
+#from fuzzywuzzy import fuzz
 import os
 
 class Convertbomfile():
@@ -148,9 +148,9 @@ class Convertbomfile():
         else:
             print('--------Вы не выбрали файл---------\n')
 
-    def strip(self, x):
+    def stripl(self, x):
         try:
-            x = str(x).lsrip(" ").rstrip(" ")
+            x = str(x).lstrip().rstrip()
             return x
         except:
             return x
@@ -195,9 +195,9 @@ class Convertbomfile():
                 new_list_func = []
                 new_list_assembly_note = []
                 not_in_base_list = []
-                bom[Cadence_Name] = bom[Cadence_Name].apply(lambda x: self.strip(x))
+                bom[Cadence_Name] = bom[Cadence_Name].apply(lambda x: self.stripl(x))
                 bomCadenceName = bom[Cadence_Name].to_list()
-                data['Cadence_Name'] = data['Cadence_Name'].apply(lambda x: self.strip(x))
+                data['Cadence_Name'] = data['Cadence_Name'].apply(lambda x: self.stripl(x))
                 dataCadenceName = data['Cadence_Name'].to_list()
                 for x in bomCadenceName:
                     if (x not in dataCadenceName):
@@ -215,20 +215,20 @@ class Convertbomfile():
                         #    var_idx.append(int(0))
                         var_idx.append(int(0))
                 print(datetime.datetime.now() - start)
-                for x in not_in_base_list:
-                    for y in dataCadenceName:
-                        try:
-                            ratio = fuzz.ratio(x, y)
-                            if ratio>95:
-                                print(x, y, ratio, len(x), len(y))
-                                for num, x1 in enumerate(list(x)):
-                                    if(x1 != list(y)[num]):
-                                        print(num, x1)
-                                for num, x1 in enumerate(list(y)):
-                                    if(x1 != list(x)[num]):
-                                        print(num, x1)
-                        except:
-                            pass
+                # for x in not_in_base_list:
+                #     for y in dataCadenceName:
+                #         try:
+                #             ratio = fuzz.ratio(x, y)
+                #             if ratio>95:
+                #                 print(x, y, ratio, len(x), len(y))
+                #                 for num, x1 in enumerate(list(x)):
+                #                     if(x1 != list(y)[num]):
+                #                         print(num, x1)
+                #                 for num, x1 in enumerate(list(y)):
+                #                     if(x1 != list(x)[num]):
+                #                         print(num, x1)
+                #         except:
+                #             pass
                 if len(not_in_base_list) > 0:
                     print(
                         f'Элементы {pd.Series(not_in_base_list).unique()} отсутствуют в базе интермеха, необходимо добавить элемент в базу!\n\n')
