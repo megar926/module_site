@@ -1,1 +1,1 @@
-C:\Users\Alexander\projects\python\bomConverterCommon\base.xlsx;C:\Users\Alexander\projects\python\bomConverterCommon\Соединители.xlsx
+/home/pi/Documents/myprojects/server/bot/imbase/base.xlsx;/home/pi/Documents/myprojects/server/bot/imbase/conn.xlsx
