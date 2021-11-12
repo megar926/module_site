@@ -3,10 +3,17 @@ from flask import Flask, flash, request, redirect, url_for, send_file, render_te
 from werkzeug.utils import secure_filename
 import logging
 import bomconverter
+import configparser
+
+config = configparser.ConfigParser()
+config.read("config.ini")
+path_eri = config["BASE_PATH"]["eri_base"]
+path_con = config["BASE_PATH"]["connector_base"]
+path_upload_folder = config["PROJECT_PATH"]["file_upload_folder"]
 
 bom = bomconverter.Convertbomfile()
-sys.path.append(r"/home/pi/Documents/myprojects/module_site/module_site-main/files_upload")
-UPLOAD_FOLDER = r'/home/pi/Documents/myprojects/module_site/module_site-main/files_upload'
+sys.path.append(path_upload_folder)
+UPLOAD_FOLDER = path_upload_folder
 ALLOWED_EXTENSIONS = {'html', 'xlsx', 'pdf'}
 
 app = Flask(__name__)
@@ -25,7 +32,7 @@ def upload_file():
         if request.files['fileBom']:
             file = request.files['fileBom']
             render_template("main.html", text='Загружаем базу')
-            bom.loadBase("/home/pi/Documents/myprojects/module_site/module_site-main/adr_base.txt")
+            bom.loadBase(path_eri, path_con)
             # if user does not select file, browser also
             # submit an empty part without filename
             if file.filename == '':
@@ -35,7 +42,7 @@ def upload_file():
                 filename = secure_filename(file.filename)
                 print(file.filename, filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
-                stat, bomFilePath = bom.convert_cn("/home/pi/Documents/myprojects/module_site/module_site-main/files_upload/"+file.filename)
+                stat, bomFilePath = bom.convert_cn(path_upload_folder+file.filename)
                 print(bomFilePath)
                 if stat:
                     return send_file(bomFilePath, as_attachment=True)
@@ -49,14 +56,14 @@ def upload_file():
             try:
                 fileZamPick = request.files['fileZamPick']
                 fileZamPick.save(os.path.join(app.config['UPLOAD_FOLDER'], fileZamPick.filename))
-                zam_file = "/home/pi/Documents/myprojects/module_site/module_site-main/files_upload/"+fileZamPick.filename
+                zam_file = path_upload_folder+fileZamPick.filename
             except:
                 zam_file = ''
             if request.form.get("checkDb"):
                 checkdbval = True
             else:
                 checkdbval = False
-            bom.convertpick(checkdbval, "/home/pi/Documents/myprojects/module_site/module_site-main/files_upload/"+fileBomPick.filename, "/home/pi/Documents/myprojects/module_site/module_site-main/files_upload/"+fileBrdPick.filename, zam_file)
+            bom.convertpick(checkdbval, path_upload_folder+fileBomPick.filename, path_upload_folder+fileBrdPick.filename, zam_file)
     return render_template("main.html", text = bomFilePath)
 @app.route('/serverstats', methods=['GET', 'POST'])
 def stats():

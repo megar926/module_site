@@ -9,23 +9,16 @@ import os
 
 class Convertbomfile():
 
-    def loadBase(self, path):
-        f = open(path, 'r')
-        file_ = f.read()
-        file_ = file_.split(';')
-        adr_base = file_[0]
-        adr_conn = file_[1]
-        print(adr_base)
-        inpu = ''
+    def loadBase(self, path_eri, path_conn):
         try:
             print('Загрузка базы данных.........................................')
-            self.base_intermech = pd.read_excel(adr_base)
+            self.base_intermech = pd.read_excel(path_eri)
             print('OK: Файл базы данных загружен\n')
         except FileNotFoundError:
             print('ERROR: Файл базы данных не загружен\n')
 
         try:
-            self.base_intermech_conn = pd.read_excel(adr_conn)
+            self.base_intermech_conn = pd.read_excel(path_conn)
             self.base_intermech = self.base_intermech.append(self.base_intermech_conn, ignore_index=True)
             print('OK: Файл базы данных соединителей загружен\n')
 
