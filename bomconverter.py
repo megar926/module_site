@@ -18,7 +18,9 @@ class Convertbomfile():
             print('ERROR: Файл базы данных не загружен\n')
 
         try:
+            print(path_conn)
             self.base_intermech_conn = pd.read_excel(path_conn)
+            print(self.base_intermech_conn.columns)
             self.base_intermech = self.base_intermech.append(self.base_intermech_conn, ignore_index=True)
             print('OK: Файл базы данных соединителей загружен\n')
 

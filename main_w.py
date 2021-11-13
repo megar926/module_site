@@ -1,4 +1,9 @@
 from waitress import serve
 import main
+import configparser
 
-serve(main.app, host = "192.168.1.99", port=8080, threads = 10)
+config = configparser.ConfigParser()
+config.read("config.ini")
+ip = config["SERVER_DATA"]["ip"]
+port = config["SERVER_DATA"]["port"]
+serve(main.app, host = ip, port=port, threads = 10)

@@ -1,0 +1,214 @@
+2021-11-13 13:08:04,034 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 13:30:03,240 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 13:31:06,832 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 13:40:54,396 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 13:41:13,621 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 14:13:57,216 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 14:14:26,230 ERROR main waitress-0 : Exception on /start [GET]
+Traceback (most recent call last):
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Alexander\projects\python\module_site\main.py", line 70, in start
+    urlForBomConverter = url_for('converter')
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\helpers.py", line 326, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\werkzeug\routing.py", line 2314, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'converter'. Did you mean 'start' instead?
+2021-11-13 14:15:15,380 ERROR main waitress-2 : Exception on /start [GET]
+Traceback (most recent call last):
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Alexander\projects\python\module_site\main.py", line 70, in start
+    urlForBomConverter = url_for('converter')
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\helpers.py", line 326, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\werkzeug\routing.py", line 2314, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'converter'. Did you mean 'start' instead?
+2021-11-13 14:16:19,555 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 14:16:23,281 ERROR main waitress-0 : Exception on /start [GET]
+Traceback (most recent call last):
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Alexander\projects\python\module_site\main.py", line 71, in start
+    urlForBomConverter = url_for('converter')
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\helpers.py", line 326, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\werkzeug\routing.py", line 2314, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'converter'. Did you mean 'start' instead?
+2021-11-13 14:16:42,516 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 14:16:47,889 ERROR main waitress-0 : Exception on /start [GET]
+Traceback (most recent call last):
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Alexander\projects\python\module_site\main.py", line 71, in start
+    urlForBomConverter = url_for('converter')
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\helpers.py", line 326, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\werkzeug\routing.py", line 2314, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'converter'. Did you mean 'start' instead?
+2021-11-13 14:17:13,091 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 14:17:16,640 ERROR main waitress-0 : Exception on /start [GET]
+Traceback (most recent call last):
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Alexander\projects\python\module_site\main.py", line 71, in start
+    urlForBomConverter = url_for('/converter')
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\helpers.py", line 326, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\werkzeug\routing.py", line 2314, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint '/converter'. Did you mean 'start' instead?
+2021-11-13 14:21:31,266 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 14:21:36,439 ERROR main waitress-0 : Exception on /start [GET]
+Traceback (most recent call last):
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Alexander\projects\python\module_site\main.py", line 71, in start
+    return render_template("index.html")
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\templating.py", line 150, in render_template
+    ctx.app,
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Alexander\projects\python\module_site\templates\index.html", line 8, in top-level template code
+    <a href={{url_for('bomconverter')}}>link text</a>
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\helpers.py", line 326, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\werkzeug\routing.py", line 2314, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'bomconverter'. Did you mean 'start' instead?
+2021-11-13 14:22:09,590 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 14:22:14,300 ERROR main waitress-0 : Exception on /start [GET]
+Traceback (most recent call last):
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Alexander\projects\python\module_site\main.py", line 71, in start
+    return render_template("index.html")
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\templating.py", line 150, in render_template
+    ctx.app,
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Alexander\projects\python\module_site\templates\index.html", line 8, in top-level template code
+    <a href={{url_for('converter')}}>link text</a>
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\helpers.py", line 326, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\werkzeug\routing.py", line 2314, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'converter'. Did you mean 'start' instead?
+2021-11-13 14:24:08,249 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 14:24:19,563 ERROR main waitress-0 : Exception on /start [GET]
+Traceback (most recent call last):
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Alexander\projects\python\module_site\main.py", line 71, in start
+    return render_template("index.html")
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\templating.py", line 150, in render_template
+    ctx.app,
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Alexander\projects\python\module_site\templates\index.html", line 8, in top-level template code
+    <a href={{url_for('converter')}}>link text</a>
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\flask\helpers.py", line 326, in url_for
+    endpoint, values, method=method, force_external=external
+  File "C:\Users\Alexander\projects\python\module_site\venv\lib\site-packages\werkzeug\routing.py", line 2314, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'converter'. Did you mean 'start' instead?
+2021-11-13 14:26:18,866 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 14:27:44,793 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 14:37:35,085 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 14:38:33,921 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 14:39:42,647 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 14:48:03,466 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 14:50:01,088 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 14:51:38,254 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 14:52:18,490 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 14:53:45,675 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 14:54:07,932 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 14:54:41,081 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 14:56:58,366 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 14:57:40,563 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 14:58:04,725 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 14:58:49,893 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 15:06:35,356 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 15:07:33,033 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 15:08:36,967 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 15:10:49,369 INFO waitress MainThread : Serving on http://192.168.1.10:8080

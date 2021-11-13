@@ -65,6 +65,16 @@ def upload_file():
                 checkdbval = False
             bom.convertpick(checkdbval, path_upload_folder+fileBomPick.filename, path_upload_folder+fileBrdPick.filename, zam_file)
     return render_template("main.html", text = bomFilePath)
+@app.route('/start', methods=['GET', 'POST'])
+def start():
+    print('start')
+    return render_template("index.html")
+
+@app.route('/cadencename', methods=['GET', 'POST'])
+def cadencename():
+    print('start')
+    return render_template("cadencename.html")
+
 @app.route('/serverstats', methods=['GET', 'POST'])
 def stats():
     app.logger.warning()
