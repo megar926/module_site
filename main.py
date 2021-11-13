@@ -6,7 +6,7 @@ import bomconverter
 import configparser
 
 config = configparser.ConfigParser()
-config.read("config.ini")
+config.read("config_linux.ini")
 path_eri = config["BASE_PATH"]["eri_base"]
 path_con = config["BASE_PATH"]["connector_base"]
 path_upload_folder = config["PROJECT_PATH"]["file_upload_folder"]

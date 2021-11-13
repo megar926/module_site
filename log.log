@@ -212,3 +212,52 @@ werkzeug.routing.BuildError: Could not build url for endpoint 'converter'. Did y
 2021-11-13 15:07:33,033 INFO waitress MainThread : Serving on http://192.168.1.10:8080
 2021-11-13 15:08:36,967 INFO waitress MainThread : Serving on http://192.168.1.10:8080
 2021-11-13 15:10:49,369 INFO waitress MainThread : Serving on http://192.168.1.10:8080
+2021-11-13 22:35:58,634 INFO waitress MainThread : Serving on http://192.168.1.12:8080
+2021-11-13 22:39:23,233 INFO waitress MainThread : Serving on http://192.168.1.12:8080
+2021-11-13 22:39:53,743 ERROR main waitress-1 : Exception on /converter [POST]
+Traceback (most recent call last):
+  File "/home/alex/.local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alex/.local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alex/.local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alex/.local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/alex/Документы/myprojects/module_site/main.py", line 35, in upload_file
+    bom.loadBase(path_eri, path_con)
+  File "/home/alex/Документы/myprojects/module_site/bomconverter.py", line 30, in loadBase
+    return self.base_intermech
+AttributeError: 'Convertbomfile' object has no attribute 'base_intermech'
+2021-11-13 22:40:46,376 INFO waitress MainThread : Serving on http://192.168.1.12:8080
+2021-11-13 22:41:09,655 ERROR main waitress-1 : Exception on /converter [POST]
+Traceback (most recent call last):
+  File "/home/alex/.local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alex/.local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/alex/.local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alex/.local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/alex/Документы/myprojects/module_site/main.py", line 45, in upload_file
+    stat, bomFilePath = bom.convert_cn(path_upload_folder+file.filename)
+  File "/home/alex/Документы/myprojects/module_site/bomconverter.py", line 106, in convert_cn
+    self.bomData = pd.read_html(self.name_file)[1]
+  File "/home/alex/.local/lib/python3.8/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/alex/.local/lib/python3.8/site-packages/pandas/io/html.py", line 1098, in read_html
+    return _parse(
+  File "/home/alex/.local/lib/python3.8/site-packages/pandas/io/html.py", line 902, in _parse
+    parser = _parser_dispatch(flav)
+  File "/home/alex/.local/lib/python3.8/site-packages/pandas/io/html.py", line 859, in _parser_dispatch
+    raise ImportError("lxml not found, please install it")
+ImportError: lxml not found, please install it
+2021-11-13 22:43:32,538 INFO waitress MainThread : Serving on http://192.168.1.12:8080
+2021-11-13 22:49:19,545 INFO waitress MainThread : Serving on http://192.168.1.12:8080
+2021-11-13 22:51:35,622 INFO waitress MainThread : Serving on http://192.168.1.12:8080
+2021-11-13 22:53:12,197 INFO waitress MainThread : Serving on http://192.168.1.12:8080
+2021-11-13 22:57:46,167 INFO waitress MainThread : Serving on http://192.168.1.12:8080
+2021-11-13 23:05:40,615 INFO waitress MainThread : Serving on http://192.168.1.12:8080
+2021-11-13 23:06:00,751 WARNING waitress.queue MainThread : Task queue depth is 1
+2021-11-13 23:06:08,456 WARNING waitress.queue MainThread : Task queue depth is 2

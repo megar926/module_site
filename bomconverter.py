@@ -292,11 +292,13 @@ class Convertbomfile():
                     ['Наименование', Cadence_Name, Ref, Count, 'Вариант', 'Примечание ПЭ', 'Примечания', 'Тип обьекта',
                      'Обозначение', 'Элемент перечня элементов', 'Класс', 'Фирма изготовитель', 'Функциональное назначение',
                      'Примечание для производства']]
-                file_name = self.name_file.split("\\")[-1].split(".")[0]
-                file_name_with_type = self.name_file.split("\\")[-1]
+                file_name = self.name_file.split(os.sep)[-1].split(".")[0]
+                file_name_with_type = self.name_file.split(os.sep)[-1]
                 print(file_name)
                 path = self.name_file.replace(file_name_with_type, '')
+                print("her")
                 print(path)
+                print("her")
                 bom.to_excel(f'{path}intermech_{file_name}.xlsx', index=False, engine='openpyxl')
                 print(f'\nСоздан загрузочный BOM файл для САПР Интермех: {path}intermech_{file_name}\n')
                 end = datetime.datetime.now()
