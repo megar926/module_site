@@ -261,3 +261,5 @@ ImportError: lxml not found, please install it
 2021-11-13 23:05:40,615 INFO waitress MainThread : Serving on http://192.168.1.12:8080
 2021-11-13 23:06:00,751 WARNING waitress.queue MainThread : Task queue depth is 1
 2021-11-13 23:06:08,456 WARNING waitress.queue MainThread : Task queue depth is 2
+2021-11-14 00:59:31,070 INFO waitress MainThread : Serving on http://192.168.1.12:8080
+2021-11-14 13:49:35,702 INFO waitress MainThread : Serving on http://192.168.1.12:8080

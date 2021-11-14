@@ -6,10 +6,11 @@ import bomconverter
 import configparser
 
 config = configparser.ConfigParser()
-config.read("config_linux.ini")
+config.read("/home/alex/Документы/myprojects/module_site/config_linux.ini")
 path_eri = config["BASE_PATH"]["eri_base"]
 path_con = config["BASE_PATH"]["connector_base"]
 path_upload_folder = config["PROJECT_PATH"]["file_upload_folder"]
+path_log = config["PROJECT_PATH"]["log_file"]
 
 bom = bomconverter.Convertbomfile()
 sys.path.append(path_upload_folder)
