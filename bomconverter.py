@@ -199,11 +199,11 @@ class Convertbomfile():
                         not_in_base_list.append(str(x))
                     else:
                         rowData = data[data['Cadence_Name'] == x]
-                        new_list.append(str(rowData['Наименование']))
-                        new_list_class.append(str(rowData['Класс']))
-                        new_list_firm.append(str(rowData['Фирма изготовитель']))
-                        new_list_func.append(str(rowData['Функциональное назначение']))
-                        new_list_assembly_note.append(str(rowData['Примечание для производства']))
+                        new_list.append(str(rowData['Наименование'].iloc[0]))
+                        new_list_class.append(str(rowData['Класс'].iloc[0]))
+                        new_list_firm.append(str(rowData['Фирма изготовитель'].iloc[0]))
+                        new_list_func.append(str(rowData['Функциональное назначение'].iloc[0]))
+                        new_list_assembly_note.append(str(rowData['Примечание для производства'].iloc[0]))
                         # if int(data[data['Cadence_Name'] == x]['Вариант'])>=0:
                         #    var_idx.append(int(data[data['Cadence_Name'] == x]['Вариант']))
                         # else:
