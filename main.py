@@ -32,7 +32,7 @@ def upload_file():
         # check if the post request has the file part
         if request.files['fileBom']:
             file = request.files['fileBom']
-            render_template("main.html", text='Загружаем базу')
+            render_template("bomfileconverter.html", text='Загружаем базу')
             bom.loadBase(path_eri, path_con)
             # if user does not select file, browser also
             # submit an empty part without filename
@@ -49,7 +49,13 @@ def upload_file():
                     return send_file(bomFilePath, as_attachment=True)
                 else:
                     print(bomFilePath)
-        elif (request.files['fileBomPick']) and (request.files['fileBrdPick']):
+    return render_template("bomfileconverter.html", text = bomFilePath)
+
+@app.route('/pickandplace', methods=['GET', 'POST'])
+def pickandplace():
+    if request.method == 'POST':
+        print(request.files, request.url)
+        if (request.files['fileBomPick']) and (request.files['fileBrdPick']):
             fileBomPick = request.files['fileBomPick']
             fileBomPick.save(os.path.join(app.config['UPLOAD_FOLDER'], fileBomPick.filename))
             fileBrdPick = request.files['fileBrdPick']
@@ -65,7 +71,7 @@ def upload_file():
             else:
                 checkdbval = False
             bom.convertpick(checkdbval, path_upload_folder+fileBomPick.filename, path_upload_folder+fileBrdPick.filename, zam_file)
-    return render_template("main.html", text = bomFilePath)
+    return render_template("pickandplace.html")
 @app.route('/start', methods=['GET', 'POST'])
 def start():
     print('start')
