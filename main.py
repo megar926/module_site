@@ -46,6 +46,7 @@ def upload_file():
                 stat, bomFilePath = bom.convert_cn(path_upload_folder+file.filename)
                 print(bomFilePath)
                 if stat:
+                    render_template("success.html")
                     return send_file(bomFilePath, as_attachment=True)
                 else:
                     print(bomFilePath)
@@ -87,6 +88,10 @@ def stats():
     app.logger.warning()
     app.logger.error()
     app.logger.info()
+
+@app.route('/success')
+def success():
+   return render_template("success.html")
     
 if __name__ == '__main__':
     app.run(debug = True)

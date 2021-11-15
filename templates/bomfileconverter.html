@@ -12,8 +12,19 @@
       <input type=file name=fileBom value="Select BOM html">
         <br>
         <br>
-      <input type=submit value="Convert Bom">
+        <label for = "btn" id = "info"></label>
+      <input id = 'submit_btn' onclick="changeBtnColor()" type=submit value="Convert Bom" name = "btn">
    </form>
     <br>
     <textarea cols = 90 rows = 20>{{ text }}</textarea>
      </center>
+
+<script>
+  var col = document.getElementById("submit_btn");
+  var inf = document.getElementById("info");
+
+function changeBtnColor() {
+  col.style.color = "red";
+  inf.innerHTML = "WAIT........";
+}
+</script>
