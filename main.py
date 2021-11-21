@@ -3,6 +3,7 @@ from flask import Flask, flash, request, redirect, url_for, send_file, render_te
 from werkzeug.utils import secure_filename
 import logging
 import bomconverter
+from tutocn import convert as tutocn
 import configparser
 
 config = configparser.ConfigParser()
@@ -95,3 +96,4 @@ def success():
     
 if __name__ == '__main__':
     app.run(debug = True)
+    print(tutocn("ddss"))
