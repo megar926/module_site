@@ -111,9 +111,42 @@ class Convertbomfile():
                 self.bomData = pd.read_excel(self.name_file)
             else:
                 print('Выбраный файл иммеет не верный формат!\n')
+            self.bomData = self.bomData[["Ref Des", "PART_NUMBER", "JEDEC_TYPE", "NOTE", "Qty"]]
             self.bomData['PART_NUMBER'] = self.bomData['PART_NUMBER'].replace('NC', 'ЭЛЕМЕНТ ПЕЧАТНОГО МОНТАЖА')
             self.bomData['PART_NUMBER'] = self.bomData['PART_NUMBER'].replace('?', 'ЭЛЕМЕНТ ПЕЧАТНОГО МОНТАЖА')
             self.bomData['Qty'] = self.bomData['Qty'].astype(int)
+            rd = []
+            pn = []
+            jt = []
+            nt = []
+            qt = []
+            for poz in range(self.bomData.shape[0]):
+                rd_val = self.bomData.iloc[poz]["Ref Des"]
+                pn_val = self.bomData.iloc[poz]["PART_NUMBER"]
+                jt_val = self.bomData.iloc[poz]["JEDEC_TYPE"]
+                nt_val = self.bomData.iloc[poz]["NOTE"]
+                qt_val = self.bomData.iloc[poz]["Qty"]
+                if (";" in nt_val):
+                    nt_val_list = nt_val.split(";")
+                    try:
+                        pr_num = int(nt_val_list[-1].replace("PR", ""))
+                    except:
+                        pr_num = "?"
+                    for poz_in_note in range(len(nt_val_list) - 1):
+                        rd.append(rd_val)
+                        pn.append(nt_val_list[poz_in_note].strip())
+                        jt.append(jt_val)
+                        nt.append(f"Примечание {pr_num}")
+                        qt.append(qt_val)
+                else:
+                    rd.append(rd_val)
+                    pn.append(pn_val)
+                    jt.append(jt_val)
+                    nt.append(nt_val)
+                    qt.append(qt_val)
+            self.bomData = pd.DataFrame({"Ref Des":rd, "PART_NUMBER":pn, "JEDEC_TYPE":jt, "NOTE":nt, "Qty":qt})
+
+
             note_rus = []
 
             self.bomData['NOTE'].replace('-', '', inplace=True)

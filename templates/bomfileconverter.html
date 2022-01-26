@@ -12,12 +12,16 @@
       <input type=file name=fileBom value="Select BOM html">
         <br>
         <br>
-        <label for = "btn" id = "info"></label>
+        <label for = "btn" id = "info">{{ info }}</label>
         <br>
       <input id = 'submit_btn' onclick="changeBtnColor()" type=submit value="Convert Bom" name = "btn">
    </form>
     <br>
-    <textarea cols = 90 rows = 20>{{ text }}</textarea>
+    {% for x in text %}
+    <br>
+    {{ x }}
+    <br>
+    {% endfor %}
      </center>
 
 <script>
@@ -28,4 +32,7 @@ function changeBtnColor() {
   col.style.color = "red";
   inf.innerHTML = "Подождите....при успешной обаботке файла, он будет скачен автоматически...";
 }
+  window.onload = function(){
+    col.style.color = "green";
+  }
 </script>

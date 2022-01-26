@@ -7,11 +7,13 @@
 <body>
 <center><h2>Конвертер наименования отечественного ЭРИ в Cadence Name</h2></center>
 <hr>
-<form>
+<form method=post>
     <center>
 <input type = "text" name = "input_tu_name" placeholder="Наименование по ТУ" size="80"><br><br>
-    <input type = "text" name = "output_cn" size = "80"><br><br>
-<input type=submit value="Convert">
+    <input type = "text" name = "output_cn" size = "80" value = {{ cadence }} ><br><br>
+<input type=submit value="Convert"><br><br>
+<label>{{ tu }}</label><br>
+<label>{{ cadence }}</label><br>
     </center>
 </form>
 

@@ -28,6 +28,8 @@ def allowed_file(filename):
 @app.route('/converter', methods=['GET', 'POST'])
 def upload_file():
     bomFilePath = ''
+    bomFileText = []
+    infol = ''
     if request.method == 'POST':
         print(request.files, request.url)
         # check if the post request has the file part
@@ -45,13 +47,16 @@ def upload_file():
                 print(file.filename, filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
                 stat, bomFilePath = bom.convert_cn(path_upload_folder+file.filename)
-                print(bomFilePath)
+                for x in bomFilePath:
+                    print(x)
+                    bomFileText.append(x)
                 if stat:
                     render_template("success.html")
                     return send_file(bomFilePath, as_attachment=True)
                 else:
                     print(bomFilePath)
-    return render_template("bomfileconverter.html", text = bomFilePath)
+                    infol = 'Add elements to IMBASE!'
+    return render_template("bomfileconverter.html", text = bomFileText, info = infol)
 
 @app.route('/pickandplace', methods=['GET', 'POST'])
 def pickandplace():
@@ -76,13 +81,23 @@ def pickandplace():
     return render_template("pickandplace.html")
 @app.route('/start', methods=['GET', 'POST'])
 def start():
-    print('start')
+    if request.method == 'POST':
+        print(request.data)
     return render_template("index.html")
 
 @app.route('/cadencename', methods=['GET', 'POST'])
 def cadencename():
-    print('start')
-    return render_template("cadencename.html")
+    if request.method == 'POST':
+        if (request.form['input_tu_name']):
+            tu = request.form['input_tu_name']
+            cadence = tutocn(request.form['input_tu_name'])
+        else:
+            cadence = ''
+            tu = ''
+    else:
+        cadence = ''
+        tu = ''
+    return render_template("cadencename.html", cadence = cadence, tu = tu)
 
 @app.route('/serverstats', methods=['GET', 'POST'])
 def stats():
@@ -96,4 +111,3 @@ def success():
     
 if __name__ == '__main__':
     app.run(debug = True)
-    print(tutocn("ddss"))

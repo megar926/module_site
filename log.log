@@ -263,3 +263,47 @@ ImportError: lxml not found, please install it
 2021-11-13 23:06:08,456 WARNING waitress.queue MainThread : Task queue depth is 2
 2021-11-14 00:59:31,070 INFO waitress MainThread : Serving on http://192.168.1.12:8080
 2021-11-14 13:49:35,702 INFO waitress MainThread : Serving on http://192.168.1.12:8080
+2021-11-16 22:09:15,766 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-11-16 22:09:15,785 INFO werkzeug MainThread :  * Restarting with stat
+2021-11-16 22:09:16,367 WARNING werkzeug MainThread :  * Debugger is active!
+2021-11-16 22:09:16,465 INFO werkzeug MainThread :  * Debugger PIN: 469-708-252
+2021-11-16 22:10:38,022 INFO werkzeug MainThread :  * Detected change in '/home/alex/Документы/myprojects/module_site/main.py', reloading
+2021-11-16 22:10:38,112 INFO werkzeug MainThread :  * Restarting with stat
+2021-11-16 22:10:38,804 WARNING werkzeug MainThread :  * Debugger is active!
+2021-11-16 22:10:38,805 INFO werkzeug MainThread :  * Debugger PIN: 469-708-252
+2021-11-16 22:10:48,411 INFO werkzeug MainThread :  * Detected change in '/home/alex/Документы/myprojects/module_site/main.py', reloading
+2021-11-16 22:10:48,496 INFO werkzeug MainThread :  * Restarting with stat
+2021-11-16 22:10:49,198 WARNING werkzeug MainThread :  * Debugger is active!
+2021-11-16 22:10:49,199 INFO werkzeug MainThread :  * Debugger PIN: 469-708-252
+2021-11-16 22:10:59,128 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-11-16 22:10:59,129 INFO werkzeug MainThread :  * Restarting with stat
+2021-11-16 22:10:59,715 WARNING werkzeug MainThread :  * Debugger is active!
+2021-11-16 22:10:59,716 INFO werkzeug MainThread :  * Debugger PIN: 469-708-252
+2021-11-16 22:16:43,772 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-11-16 22:16:43,792 INFO werkzeug MainThread :  * Restarting with stat
+2021-11-16 22:16:44,372 WARNING werkzeug MainThread :  * Debugger is active!
+2021-11-16 22:16:44,480 INFO werkzeug MainThread :  * Debugger PIN: 123-136-876
+2021-11-16 22:17:27,515 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-11-16 22:17:27,517 INFO werkzeug MainThread :  * Restarting with stat
+2021-11-16 22:17:28,125 WARNING werkzeug MainThread :  * Debugger is active!
+2021-11-16 22:17:28,126 INFO werkzeug MainThread :  * Debugger PIN: 123-136-876
+2021-11-16 22:18:17,755 INFO werkzeug MainThread :  * Detected change in '/home/alex/Документы/myprojects/module_site/main.py', reloading
+2021-11-16 22:18:17,840 INFO werkzeug MainThread :  * Restarting with stat
+2021-11-16 22:18:18,456 WARNING werkzeug MainThread :  * Debugger is active!
+2021-11-16 22:18:18,457 INFO werkzeug MainThread :  * Debugger PIN: 123-136-876
+2021-11-16 22:18:23,760 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-11-16 22:18:23,761 INFO werkzeug MainThread :  * Restarting with stat
+2021-11-16 22:18:24,332 WARNING werkzeug MainThread :  * Debugger is active!
+2021-11-16 22:18:24,333 INFO werkzeug MainThread :  * Debugger PIN: 123-136-876
+2021-11-16 22:18:59,272 INFO werkzeug MainThread :  * Detected change in '/home/alex/Документы/myprojects/module_site/main.py', reloading
+2021-11-16 22:18:59,371 INFO werkzeug MainThread :  * Restarting with stat
+2021-11-16 22:19:00,008 WARNING werkzeug MainThread :  * Debugger is active!
+2021-11-16 22:19:00,009 INFO werkzeug MainThread :  * Debugger PIN: 123-136-876
+2021-11-16 23:09:19,731 INFO werkzeug MainThread :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-11-16 23:09:19,773 INFO werkzeug MainThread :  * Restarting with stat
+2021-11-16 23:09:20,361 WARNING werkzeug MainThread :  * Debugger is active!
+2021-11-16 23:09:20,460 INFO werkzeug MainThread :  * Debugger PIN: 536-055-413
+2021-11-16 23:10:19,728 INFO werkzeug MainThread :  * Detected change in '/home/alex/Документы/myprojects/module_site/main.py', reloading
+2021-11-16 23:10:19,822 INFO werkzeug MainThread :  * Restarting with stat
+2021-11-16 23:10:20,467 WARNING werkzeug MainThread :  * Debugger is active!
+2021-11-16 23:10:20,468 INFO werkzeug MainThread :  * Debugger PIN: 536-055-413
